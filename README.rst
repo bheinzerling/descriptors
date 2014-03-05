@@ -3,7 +3,7 @@ decriptors - a package for easy input validation
 
 **tl;dr:** A collection of descriptors for easily validating attributes like so:
 
-::
+.. code:: python
 
     from descriptors import Validated, ExistingPath, MadePath
 
@@ -38,7 +38,7 @@ Usage examples
 
 Validation of builtin types:
 
-::
+.. code:: python
 
     from descriptors import Validated, Str, Dict, Int
 
@@ -55,7 +55,7 @@ Validation of builtin types:
 
 Validation of numeric ranges:
 
-::
+.. code:: python
 
     from descriptors import Validated, GreaterThan, InRange, NotZero
 
@@ -71,7 +71,7 @@ Validation of numeric ranges:
 
 Some more examples:
 
-::
+.. code:: python
 
     import os
     from descriptors import (
@@ -96,7 +96,7 @@ Some more examples:
 
 Descriptors can be composed using the bitwise AND and OR operators (i.e. & and \|):
 
-::
+.. code:: python
 
     from descriptors import (
         Validated, Int, Satisfies, HasAttr, GreaterThan, LessThan)
@@ -115,7 +115,7 @@ Inheriting from Validated means that class attributes with an assigned Descripto
 will be validated, but nothing else. Other class attributes behave as usual, and assigning a Descriptor
 to an instance variable will not have the desired effect:
 
-::
+.. code:: python
 
     from descriptors import Validated, HasAttr
 
@@ -145,7 +145,7 @@ Why use descriptors?
 If you have ever written a program that takes user input, you have probably written code to make sure that user input is what your program expects it to be. For example, say you're writing a tool to batch-process files in an input directory and save them to an output directory. You'll want to verify that input_dir exists and show the user a non-cryptic error message if it doesn't. You'll also want to make sure output_dir exists or can be created, so the program doesn't process files for possibly hours just to fail saving the results because output_dir contains an invalid character:
 
 
-::
+.. code:: python
 
     class BatchProcessor(object):
         def process(self, input_dir, output_dir):
@@ -162,7 +162,7 @@ If you have ever written a program that takes user input, you have probably writ
 
 This is tedious to write and maintain, and doesn't prevent setting invalid values somewhere else in the program. A better approach is using properties:
 
-::
+.. code:: python
 
     class BatchProcessor(object):
         @property
@@ -180,7 +180,7 @@ This is tedious to write and maintain, and doesn't prevent setting invalid value
 
 Properties make your intentions much clearer and prevent setting invalid values, but now there are getters and setters all over the place. Also, reusing properties from one class in another isn't exactly convenient. A much better solution is using `descriptors <http://docs.python.org/2/howto/descriptor.html>`_. A descriptor is an object that hooks into attribute access by implementing any of the following methods: `__get__`, `__set__`, `__delete__`. By assigning a descriptor to a class attribute, that descriptor's `__get__`, `__set__`, or `__delete__` method will be invoked when the attribute is retrieved, set, or deleted. With descriptors, our example program looks like this:
 
-::
+.. code:: python
 
     from descriptors import Validated, ExistingPath, MadePath
 
