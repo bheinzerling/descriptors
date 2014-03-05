@@ -26,7 +26,7 @@ set.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -58,7 +58,7 @@ attribute to a callable object.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -100,7 +100,7 @@ If other_attr does not exist, it is assumed to be None.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -125,7 +125,7 @@ represent an existing path.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -161,7 +161,7 @@ on the numeric value represented by the string.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -203,7 +203,7 @@ the specified value.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -226,7 +226,7 @@ greater than or equal to the specified value.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -249,7 +249,7 @@ is set to an object that has the specified attribute.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -272,7 +272,7 @@ a member of a set of given elements.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -295,7 +295,7 @@ specified range.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -326,7 +326,7 @@ specified length.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -349,7 +349,7 @@ the specified value.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -372,7 +372,7 @@ smaller than or equal to the specified value.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -414,7 +414,7 @@ most the specified length.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -437,7 +437,7 @@ least the specified length.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -490,7 +490,7 @@ values gives a False-y result.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
@@ -542,7 +542,7 @@ gives a True-y result.
 
 Example:
 
-::
+.. code:: python
 
 
         class A(Validated):
