@@ -1,4 +1,4 @@
-decriptors - a package for easy input validation
+descriptors - a package for easy input validation
 =================================================
 
 **tl;dr:** A collection of descriptors for easily validating attributes like so:
