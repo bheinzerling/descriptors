@@ -231,7 +231,7 @@ Installation without pip:
 
 Download the latest zip archive of this package from pypi:
 
-`pypi.python.org/pypi/descriptors/ <pypi.python.org/pypi/descriptors/>`_
+`http://pypi.python.org/pypi/descriptors/ <http://pypi.python.org/pypi/descriptors/>`_
 
 Extract the archive, navigate to the extracted folder and run:
 
