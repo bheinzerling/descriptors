@@ -91,7 +91,7 @@ Some more examples:
     a.triple = [1, 2, 3]  # ok
     a.something = None  # ValueError
     a.only_a = "aaaab"  # ValueError
-    a.lower_str = "sOmE StrIng"  # a.lower == "some string"
+    a.lower_str = "sOmE StrIng"  # a.lower_str == "some string"
     a.even = 1  # ValueError
 
 Descriptors can be composed using the bitwise AND and OR operators (i.e. & and \|):
